@@ -1,0 +1,49 @@
+<div class="theme">
+  <div class="img-box">
+    <div class="white-box-dash">
+      <h1 style="font-size: 27px; font-weight: 100; color: rgb(186, 0, 217);">Your favorites</h1>
+      <p style="color: black; font-size: 14px; margin-top: 0;">From here you can schedule a time to view the apartments you've liked</p>
+    </div>
+  </div>
+  <div class="dashboard-container">
+
+    <%= form_tag apply_path, method: :post do %>
+      <div class="text-center">
+        <%= submit_tag "Schedule a viewing!", class: "reserve-all" %>
+      </div>
+      <% @property_viewings.each do |property_viewing| %>
+        <div class="dashboard-property-container">
+          <%= check_box_tag "property_viewings[#{property_viewing.id}]", property_viewing.id, name: "property_viewings[]" %>
+          <!-- <input class="checkbox" id="pvc-<%#= property_viewing.id %>" type="checkbox" name="property_viewings[]" value="<%#= property_viewing.id %>" > -->
+          <%= label_tag "property_viewings[#{property_viewing.id}]" do %>
+            <div class="dashboard-property">
+              <div class="image-price-div">
+                <%=cl_image_tag property_viewing.property.photos.first.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin-left: 12px; margin-top: 10px;" %>
+                <div class="price">
+                  <h2>¥<%="#{property_viewing.property.price.to_s[0..-4]},#{property_viewing.property.price.to_s[-3..-1]}"%></h2>
+                </div>
+              </div>
+              <div class="dashboard-info">
+                <div><i class="fas fa-train"></i>
+                  <%= property_viewing.property.distance_to_station %> min from <%= property_viewing.property.location %> station
+                </div>
+                <div><i class="fas fa-ruler-combined"></i>
+                  <%= property_viewing.property.size %>m²
+                  <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Size</p>
+                </div>
+                <div><i class="fas fa-heartbeat"></i>
+                  <%= property_viewing.property.age %> years old
+                  <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Age</p>
+                </div>
+
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+      <div class="text-center">
+        <%= submit_tag "Schedule a viewing!", class: "reserve-all" %>
+      </div>
+    <% end %>
+  </div>
+</div>

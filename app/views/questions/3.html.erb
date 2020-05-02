@@ -1,0 +1,39 @@
+<div class="theme">
+  <div class="img-box">
+    <div class= "white-box">
+      <p>Finding the perfect place for you...</p>
+      <div class="progress-bar">
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="question-box">
+    <h1 class="question" style= "font-size: 24px">Are you a loner or do you have a tribe?</h1>
+    <div class="button-div">
+        <%= simple_form_for(@user, url: question_update_path) do |f| %>
+            <%= f.input :size_desired, as: :hidden, input_html: { value: "50" }, wrapper_html: {class: "m-0"} %>
+            <%= f.submit "Big tribe", class:"choice-button" %>
+        <% end %>
+
+        <%= simple_form_for(@user, url: question_update_path) do |f| %>
+            <%= f.input :size_desired, as: :hidden, input_html: { value: "35" }, wrapper_html: {class: "m-0"} %>
+            <%= f.submit "Small tribe", class:"choice-button" %>
+        <% end %>
+
+        <%= simple_form_for(@user, url: question_update_path) do |f| %>
+            <%= f.input :size_desired, as: :hidden, input_html: { value: "25" }, wrapper_html: {class: "m-0"} %>
+            <%= f.submit "Loner", class:"choice-button" %>
+        <% end %>
+    </div>
+  </div>
+  <%= render 'shared/question_layout' %>
+</div>

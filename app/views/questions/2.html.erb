@@ -1,0 +1,61 @@
+<div class="theme">
+  <div class="img-box">
+    <div class= "white-box">
+      <p>Finding the perfect place for you...</p>
+      <div class="progress-bar">
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="question-box">
+    <h1 class="question">Where do you work?</h1>
+    <%= simple_form_for(@user, url: question_update_path) do |f| %>
+      <div>
+        <label for="work_location"></label>
+          <%= select(:user, :work_location, [
+            ['Ebisu'],
+            ['Ginza'],
+            ['Ikebukuro'],
+            ['Meguro'],
+            ['Omotesando'],
+            ['Roppongi'],
+            ['Shibuya'],
+            ['Shinjuku'],
+            ['Tokyo (Station)'],
+            ['Yurakucho'],
+            ]) %>
+      </div>
+      <h1 class="question">Where do you have fun?</h1>
+      <div>
+        <div>
+          <label for="partylocation"></label>
+          <%= select(:user, :partylocation, [
+            ['Ebisu'],
+            ['Ginza'],
+            ['Ikebukuro'],
+            ['Meguro'],
+            ['Omotesando'],
+            ['Roppongi'],
+            ['Shibuya'],
+            ['Shinjuku'],
+            ['Tokyo (Station)'],
+            ['Yurakucho'],
+            ]) %>
+        </div>
+      </div>
+    </div>
+    <div class="q-div">
+      <%= f.submit "Continue", class:"choice-button" %>
+    </div>
+    <% end %>
+  <%= render 'shared/question_layout' %>
+</div>

@@ -1,0 +1,45 @@
+<div class="theme">
+  <i class="fas fa-chevron-left go_back_arrow" style="color: white;"></i><%= link_to "To feed", property_viewings_feed_path, class: "go_back_button", style: "color: white;" %>
+  <div class="img-box-green">
+    <div class="white-box-avail">
+      <h1 style="font-size: 27px; font-weight: 100; color: #498A6B">Schedule a viewing</h1>
+      <p>When are you available to view these properties?</p>
+    </div>
+  </div>
+  <div class="profile-card">
+    <%= form_for @user, url: profile_path, class: "form-control" do |f| %>
+      <div class="schedule-picker">
+        <%= f.fields_for :availability do |fa| %>
+          <% time_options = options_for_select(%w[8:00 9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 18:00 19:00 20:00]) %>
+          <% Date::DAYS_INTO_WEEK.each do |day_name, day_index| %>
+            <div class="row" style="margin-right: 0; margin-left: 0;">
+              <div class="col-1" style="padding:0;">
+                <input class="checkbox" type="checkbox" class="form-check-input">
+              </div>
+              <div class="col-4" style="padding:0;">
+                <%= day_name.to_s.capitalize %>
+              </div>
+              <%= fa.fields_for day_name do |fa_day| %>
+                <div class="col-3" style="padding:0;">
+                  <%= fa_day.select :start, time_options %>
+                </div>
+                <div class="col-1" style="padding:0;"> - </div>
+                <div class="col-3" style="padding:0;">
+                  <%= fa_day.select :end, time_options %>
+                </div>
+              <% end %>
+            </div>
+        <% end %>
+      </div>
+    <% end %>
+    <div class="profile-link">
+      <%= link_to "Complete your profile", profile_path, style:"color:#687091ed"  %>
+        <div class="profile-link-subtext">
+          <p>Completed profiles are more likely to be accepted for apartment viewings!</p>
+        </div>
+    </div>
+    <div style="margin-top: 1rem; "><%= f.submit "Send to owner", class: "choice-button", style: "background-color: #33C17E; font-weight: bold;" %></div>
+    <% end %>
+  </div>
+</div>
+

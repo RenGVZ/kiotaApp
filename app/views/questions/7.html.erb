@@ -1,0 +1,50 @@
+<div class="theme">
+  <div class="img-box">
+    <div class= "white-box">
+      <p>Finding the perfect place for you...</p>
+      <div class="progress-bar">
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="question-box">
+    <h1 class="question" style="font-size: 26px;">Tatami mats: love them or hate them?</h1>
+    <div class="question-subheader">
+      <p>
+        <a style="color: #687091ed"data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          More info
+        </a> 
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div style="background-color: #68709169; color: white; margin-top: -14px; padding: 4px; border: none; border-radius: 5px;">
+          Tatami mats are usually a feature of older (that means cheaper!) buildings in Japan </p>
+        </div>
+      </div>
+    </div>
+    <div class="button-div">
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div>
+          <%= f.check_box :tatami, checked: true, hidden: true %>
+          <%= f.submit "Love them", class: "choice-button" %>
+        </div>
+      <% end %>
+
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div>
+          <%= f.check_box :tatami, checked: false, hidden: true %>
+          <%= f.submit "Hate them", class: "choice-button" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%= render 'shared/question_layout' %>
+</div>

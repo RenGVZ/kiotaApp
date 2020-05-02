@@ -1,0 +1,5 @@
+meta_product_name: "Kiota"
+meta_title: "Kiota - The match making app for apartment hunting in Tokyo"
+meta_description: "Best apartment hunting app for English speakers"
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

@@ -1,0 +1,50 @@
+<div class="theme">
+  <div class="img-box">
+    <div class= "white-box">
+      <p>Finding the perfect place for you...</p>
+      <div class="progress-bar">
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="question-box">
+    <h1 class="question" style="font-size: 26px;">Are you willing to pay key money?</h1>
+    <div class="question-subheader">
+      <p>
+        <a style="color: #687091ed"data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          More info
+        </a> 
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div style="background-color: #68709169; color: white; margin-top: -14px; padding: 6px; border: none; border-radius: 5px; font-size: 11px;">
+          Key money is non-refundable "gift money" of up to 1 month's of rent given to the property's owner. It's not always required, but if you are willing to pay you will be open to more renting options.
+        </div>
+      </div>
+    </div>
+    <div class="button-div">
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div>
+          <%= f.check_box :key_money, checked: true, hidden: true %>
+          <%= f.submit "Yes", class: "choice-button" %>
+        </div>
+      <% end %>
+
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div>
+          <%= f.check_box :key_money, checked: false, hidden: true %>
+          <%= f.submit "No", class: "choice-button" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%= render 'shared/question_layout' %>
+</div>

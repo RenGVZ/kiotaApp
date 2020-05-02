@@ -1,0 +1,9 @@
+<div class="property_container">
+  <div style="position: absolute; width: 200px; top: 85%; left: 4%;">
+    <i class="fas fa-chevron-left go_back_arrow"></i><%= link_to "Back to house viewings", meetings_path, style: "color: #BA00D9;",class: "go_back_button" %>
+  </div>
+  <%= render 'properties/card', property: @property, user: current_user, property_viewing: @property_viewing, feed: false%>
+</div>
+
+
+

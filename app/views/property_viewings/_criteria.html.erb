@@ -1,0 +1,81 @@
+<div class="feed-criteria">
+  <h2 class="header">Things you'll love</h2>
+
+  <div class="feed-criteria-description d-flex">
+    <% if property.pets == user.pets %>
+      <div class="button-pill-criteria">
+        <i class="fas fa-dog"></i>
+        <div class="button-pill-info">
+          <p>Pet friendly</p>
+        </div>
+      </div>
+    <% else %>
+    <% end %>
+
+    <% if user.wants_park_nearby && property.distance_to_park < 10 %>
+      <div class="button-pill-criteria">
+        <i class="fas fa-shoe-prints"></i>
+        <div class="button-pill-info">
+          <p>Close to park</p>
+        </div>
+      </div>    
+    <% else %>
+    <% end %>
+  
+    <% if property.cafe_nearby == user.wants_cafe_nearby %>
+      <div class="button-pill-criteria">
+        <i class="fas fa-coffee"></i>
+        <div class="button-pill-info">
+          <p>Many cafes nearby</p>
+        </div>
+      </div>
+    <% else %>
+    <% end %>
+
+  </div>
+
+  <div class="feed-criteria-description d-flex">
+
+    <% if user.wants_first_floor && property.floor == 1 %>
+      <div class="button-pill-criteria">
+        <i class="fas fa-home"></i>
+        <div class="button-pill-info">
+          <p>First floor</p>
+        </div>
+      </div>
+    <% else %>
+    <% end %>
+  
+    <% if user.wants_supermarket_nearby && property.distance_to_supermarket < 10 %>
+      <div class="button-pill-criteria">
+        <i class="fas fa-store"></i>
+        <div class="button-pill-info">
+          <p>Close to market</p>
+        </div>
+      </div>
+    <% else %>
+    <% end %>
+
+    <% if property.bar_nearby == user.wants_bar_nearby %>
+      <div class="button-pill-criteria">
+        <i class="fas fa-beer"></i>
+        <div class="button-pill-info">
+          <p>Many bars nearby</p>
+        </div>
+      </div>
+    <% else %>
+    <% end %>
+    
+  </div>
+  <div class="feed-criteria-description d-flex">
+    <% if !user.key_money && property.key_money == 0 %>
+    <div class="button-pill-criteria">
+      <i class="fas fa-times-circle"></i>
+      <div class="button-pill-info">
+        <p>No key money</p>
+      </div>
+    </div>      
+    <% else %>
+    <% end %>
+  </div>
+</div>

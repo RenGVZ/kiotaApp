@@ -1,0 +1,35 @@
+.button-pill {
+  background: rgba(186, 0, 217, 0.53);
+  height: 43px;
+  width: 155px;
+  border-radius: 20px;
+  display: flex;
+  margin: 4px;
+  align-items: center;
+  padding-left: 14px;
+  color: white;
+}
+
+.button-pill-criteria {
+  border-radius: 20px;
+  display: flex;
+  margin: 4px;
+  align-items: center;
+  
+  color: $green;
+  
+
+    .button-pill-info p {
+      font-size: 14px;
+    }
+}
+
+.button-pill-info {
+  margin-left: 8px;
+}
+
+.button-pill-info p {
+  font-size: 13px; 
+  line-height:17px;
+  margin: 0;
+}

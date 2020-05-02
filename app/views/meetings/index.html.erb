@@ -1,0 +1,29 @@
+<div class="theme">
+  <div class="img-box-pink">
+    <p class="navbar-refresh"><i class="fas fa-sync-alt" onclick="location.reload()"></i> Refresh</p>
+    <div class= "white-box-avail">
+      <h1 style="font-size: 27px; font-weight: 100; color: #BA00D9;">Let's see a property!</h1>
+      <p>From here you can see which properties confirmed your viewing request</p>
+    </div>
+  </div>
+  <div class= "meeting-container">
+    <h1>Scheduled Viewings</h1>
+    <% @confirmed_reservations.each do |confirmed_reservation| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <%= render "card", reservation: confirmed_reservation %>
+      </div>
+    <% end %>
+  </div>
+  <div class= "meeting-container">
+    <h1>Viewings you've applied for</h1>
+    <% @applied_reservations.each do |applied_reservation| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <%= render "card", reservation: applied_reservation %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+

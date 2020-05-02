@@ -1,0 +1,26 @@
+<div class="meeting-card">
+  <%= link_to property_path(reservation.property) do %>
+    <div class= "image-view-div">
+      <%=cl_image_tag reservation.property.photos.first.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin: 16px;" %>
+    </div>
+  <% end %>
+
+  <div class="meeting-info">
+    <% if reservation.confirmed_time %>
+      <div>
+        <p class="meeting-title">When</p>
+        <p class="meeting-p"><i class="far fa-calendar"></i> <%= reservation.confirmed_time.strftime("%a, %b, %-d") %></p>
+      </div>
+    <% end %>
+    <div>
+      <p class="meeting-title">Where</p>
+      <p class="meeting-p"><i class="fas fa-train"></i> <%= reservation.property.location %></p>
+    </div>
+    <% if reservation.confirmed_time %>
+      <a class="btn btn-primary btn-sm" href="<%= reservation.google_url %>">Add to calendar</a>
+    <% end %>
+
+  <%#= link_to "", property_viewing.property, class: "btn btn-success", style: "color: white;"%>
+  </div>
+</div>
+

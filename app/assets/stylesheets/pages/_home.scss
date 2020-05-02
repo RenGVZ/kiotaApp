@@ -1,0 +1,37 @@
+// Specific CSS for your home-page
+.landing-img {
+  background-image: asset_url("extended-landing-page.svg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  // background-position: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tagline {
+  position: absolute;
+  top: 62%;
+  left: calc(50% - 150px);
+  height: 10vh; 
+  width: 300px;   
+}
+
+.tagline h2 {
+  font-size: 20px;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 4px 4px #000000;
+}
+
+.get-started-button {
+  background-image: asset_url("landing-start.svg");
+  border: none;
+  position: absolute;
+  width: 126px;
+  height: 174px;
+  left: 122px;
+  top: 74%;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,37 @@
+<div class="container mt-5" style="margin-bottom: 5rem;">
+  <i class="fas fa-chevron-left go_back_arrow"></i><%= link_to "Go back", profile_availability_path, class: "go_back_button", style: "color: #BA00D9;" %>
+  <div class="progress1" style="text-align: center;">
+    <div class="progress-bar1" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+  </div>
+  <div class="card12" style="text-align: center;margin-top: 2rem;">
+    <h2 >Profile</h2>
+      <%= form_for @user, url: profile_path, class: "form-control" do |f| %>
+        <div class="row">
+          <div class="col">
+              <div class="Questions" style="text-align: center;margin-top: 2rem;">
+                <div><%= f.label :first_name %></div>
+                <div><%= f.text_field :first_name%></div>
+                <div style="margin-top: 1rem;"><%= f.label :last_name%></div>
+                <div><%= f.text_field :last_name%></div>
+                <div style="margin-top: 1rem;"><%= f.label :birthday%></div>
+                <div class="drop_down" ><%= f.date_select :dob , {:start_year => 1980, :end_year => 2000}%></div>
+                <div style="margin-top: 1rem;"><%= f.label :address%></div>
+                <div><%= f.text_field :address %></div>
+                <div style="margin-top: 1rem;"><%= f.label :start_date%></div>
+                <div class="drop_down"><%= f.date_select :start_date %></div>
+                <div style="margin-top: 1rem;"><%= f.label :phone_number%></div>
+                <div><%= f.text_field :phone_number %></div>
+                <div style="margin-top: 1rem;"><%= f.label :registration_card_number %></div>
+                <div><%= f.text_field :registration_card_number %></div>
+                <div style="margin-top: 1rem;"><%= f.label :salary %></div>
+                <div><%= f.number_field :salary %></div>
+                <div style="margin-top: 1rem;"><%= f.label :employer_name %></div>
+                <div><%= f.text_field :employer_name %></div>
+                <div style="margin-top: 1rem; "><%= f.submit "Submit", class: "btn btn-submit" %></div>
+              </div>
+            </div>
+        </div>
+      <% end %>
+  </div>
+</div>
+

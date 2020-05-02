@@ -1,0 +1,36 @@
+.navbar-lewagon {
+  background:white;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 3.5rem;
+  justify-content: center;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 2;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 98px;
+  top: 20px;
+  left: 140px;
+  position: absolute;
+}
+
+.navbar-lewagon .navbar-brand-dashboard img {
+  width: 42px;
+  height: 40px;
+  top: 6px;
+  right: 2px;
+  position: absolute;
+}
+
+.navbar-refresh {
+  width: 98px;
+  top: 2px;
+  left: 5px;
+  position: absolute;
+  color: white;
+  font-size: 14px;
+}

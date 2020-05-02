@@ -1,0 +1,16 @@
+<div class="property_container">
+  <div class="property_card">
+    <% @properties.each do |property| %>
+      <%= cl_image_tag property.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="property-info">
+          <div class="price">¥<%= property.price %>,000/m</div>
+          <div><i class="fas fa-subway"></i> <%= property.distance_to_station %>m from <%= property.location %> station</div>
+          <div><i class="fas fa-bed"></i> <%= property.layout %></div>
+          <div><i class="fas fa-ruler-combined"></i> <%= property.size %></div>
+          <div><i class="fas fa-home"></i> <%= property.age %></div>
+          <div><i class="fas fa-money-check-alt"> </i> <%= property.deposit %>,000</div>
+        </div>
+        <div class="like"></div>
+    <% end %>
+  </div>
+</div>

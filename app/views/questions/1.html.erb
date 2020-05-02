@@ -1,0 +1,39 @@
+<div class="theme">
+  <div class="img-box">
+    <div class= "white-box">
+      <p>Finding the perfect place for you...</p>
+      <div class="progress-bar">
+        <div class="purple-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="question-box">
+    <h1 class="text-center question">How much is your monthly budget?</h1>
+    
+    <%= form_for(@user, url: question_update_path) do |f| %>
+      <div>
+        <label for="pricerange" style="color: #2FEE92;"></label>
+        <div style="display: flex; justify-content: center;">
+          <section class="range-slider" data-controller="sliders" style= "color: #BA00D9; font-size: 29px" >
+            <span class="rangeValues"></span>
+            <input name="user[min_price]" value="40000" min="10000" max="350000" step="5000" type="range" id="slider1">
+            <input name="user[max_price]" value="250000" min="10000" max="350000" step="5000" type="range" id="slider2">
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="q-div">
+      <%= f.submit "Continue", class:"choice-button" %>
+    </div>
+    <% end %>
+  <%= render 'shared/question_layout' %>
+</div>
