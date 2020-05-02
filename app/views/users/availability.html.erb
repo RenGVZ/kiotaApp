@@ -6,7 +6,7 @@
       <p>When are you available to view these properties?</p>
     </div>
   </div>
-  <div class="profile-card">
+  <div class="main-container" id="main-container-availability">
     <%= form_for @user, url: profile_path, class: "form-control" do |f| %>
       <div class="schedule-picker">
         <%= f.fields_for :availability do |fa| %>
@@ -38,7 +38,7 @@
           <p>Completed profiles are more likely to be accepted for apartment viewings!</p>
         </div>
     </div>
-    <div style="margin-top: 1rem; "><%= f.submit "Send to owner", class: "choice-button", style: "background-color: #33C17E; font-weight: bold;" %></div>
+    <div style="margin-top: 1rem; "><%= f.submit "Send to owner", class: "green-button" %></div>
     <% end %>
   </div>
 </div>

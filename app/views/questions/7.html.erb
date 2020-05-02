@@ -34,14 +34,14 @@
       <%= form_for(@user, url: question_update_path) do |f| %>
         <div>
           <%= f.check_box :tatami, checked: true, hidden: true %>
-          <%= f.submit "Love them", class: "choice-button" %>
+          <%= f.submit "Love them", class: "pink-button" %>
         </div>
       <% end %>
 
       <%= form_for(@user, url: question_update_path) do |f| %>
         <div>
           <%= f.check_box :tatami, checked: false, hidden: true %>
-          <%= f.submit "Hate them", class: "choice-button" %>
+          <%= f.submit "Hate them", class: "pink-button" %>
         </div>
       <% end %>
     </div>

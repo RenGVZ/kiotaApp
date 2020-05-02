@@ -75,14 +75,14 @@
   position: absolute;
   top: 5px;
   left: 15px;
-  color:white;
+  color:rgb(120, 120, 120);
   z-index: 3;
   font-size: 14px;
 }
 
 .go_back_button:hover {
   text-decoration: none;
-  color: white;
+  color: $purple;
 }
 
 .go_back_arrow {
@@ -122,19 +122,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-
-.choice-button {
-  width: 155px;
-  height: 36px;
-  background-color: rgba(186, 0, 217, 0.53);
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 7px;
-  color: white;
-  border: none;
-  margin: 6px;
-  // box-shadow: 0 0 0 3px #000000;
 }
 
 .q-div {

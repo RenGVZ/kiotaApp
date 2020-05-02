@@ -1,18 +1,46 @@
 .main-container {
   background-color: white;
   width: 90%;
+  height: 330px;
   position: relative;
-  margin-top: 4rem;
+  margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
   text-align: center;
-  margin-top: 5rem;
-  height: 330px;
   padding-top: 1rem;
   padding-left: 6px;
   padding-right: 6px;
   -webkit-box-shadow: 4px 6px 4px 0px rgba(214,214,214,0.74);
   -moz-box-shadow: 4px 6px 4px 0px rgba(214,214,214,0.74);
   box-shadow: 0px 6px 19px 4px rgba(214, 214, 214, 0.74);
+}
+
+#main-container-dashboard {
+  height: auto;
+  margin-bottom: 4rem;
+  padding-bottom: 22px;
+}
+
+#main-container-availability {
+  height: 370px;
+}
+
+.main-container-meeting {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-top: 22px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 6px 10px 0px rgba(214, 214, 214, 0.74);
+  padding-bottom: 22px;
+
+    h1 {
+      color:#687091ed;
+      font-size: 20px; 
+      text-align: center;
+
+    }
 }

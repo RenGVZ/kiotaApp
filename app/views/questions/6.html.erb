@@ -22,14 +22,14 @@
       <%= form_for(@user, url: question_update_path) do |f| %>
         <div>
           <%= f.check_box :wants_bar_nearby, checked: true, hidden: true %>
-          <%= f.submit "Beer", class: "choice-button" %>
+          <%= f.submit "Beer", class: "pink-button" %>
         </div>
       <% end %>
 
       <%= form_for(@user, url: question_update_path) do |f| %>
         <div>
           <%= f.check_box :wants_cafe_nearby, checked: true, hidden: true %>
-          <%= f.submit "Coffee", class: "choice-button" %>
+          <%= f.submit "Coffee", class: "pink-button" %>
         </div>
       <% end %>
     </div>

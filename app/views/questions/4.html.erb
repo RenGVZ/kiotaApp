@@ -22,14 +22,14 @@
       <%= form_for(@user, url: question_update_path) do |f| %>
         <div>
           <%= f.check_box :wants_park_nearby, checked: true, hidden: true %>
-          <%= f.submit "Yes", class: "choice-button" %>
+          <%= f.submit "Yes", class: "pink-button" %>
         </div>
       <% end %>
 
       <%= form_for(@user, url: question_update_path) do |f| %>
         <div>
           <%= f.check_box :wants_park_nearby, checked: false, hidden: true %>
-          <%= f.submit "No", class: "choice-button" %>
+          <%= f.submit "No", class: "pink-button" %>
         </div>
       <% end %>
     </div>

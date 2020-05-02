@@ -5,11 +5,11 @@
       <p style="color: black; font-size: 14px; margin-top: 0;">From here you can schedule a time to view the apartments you've liked</p>
     </div>
   </div>
-  <div class="dashboard-container">
+  <div class="main-container" id="main-container-dashboard">
 
     <%= form_tag apply_path, method: :post do %>
       <div class="text-center">
-        <%= submit_tag "Schedule a viewing!", class: "reserve-all" %>
+        <%= submit_tag "Schedule a viewing!", class: "pink-button" %>
       </div>
       <% @property_viewings.each do |property_viewing| %>
         <div class="dashboard-property-container">
@@ -23,7 +23,7 @@
                   <h2>¥<%="#{property_viewing.property.price.to_s[0..-4]},#{property_viewing.property.price.to_s[-3..-1]}"%></h2>
                 </div>
               </div>
-              <div class="dashboard-info">
+              <div class="dashboard-info text-left">
                 <div><i class="fas fa-train"></i>
                   <%= property_viewing.property.distance_to_station %> min from <%= property_viewing.property.location %> station
                 </div>
@@ -42,8 +42,9 @@
         </div>
       <% end %>
       <div class="text-center">
-        <%= submit_tag "Schedule a viewing!", class: "reserve-all" %>
+        <%= submit_tag "Schedule a viewing!", class: "pink-button" %>
       </div>
     <% end %>
   </div>
+  <i class="fas fa-chevron-left go_back_arrow"></i><%= link_to "Back to feed", property_viewings_feed_path, class: "go_back_button" %>
 </div>
