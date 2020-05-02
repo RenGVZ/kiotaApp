@@ -1,3 +1,25 @@
+.go_back_button {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  color:white;
+  z-index: 3;
+  font-size: 14px;
+}
+
+.go_back_button:hover {
+  text-decoration: none;
+  color: $purple;
+}
+
+.go_back_arrow {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  z-index: 3;
+  color: $purple;
+}
+
 .pink-button {
   width: 168px;
   height: 36px;

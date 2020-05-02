@@ -3,7 +3,8 @@
   background-image: asset_url("extended-landing-page.svg");
   background-repeat: no-repeat;
   height: 100vh;
-  // background-position: center;
+  background-position: center;
+  background-size: cover;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -30,7 +31,7 @@
   position: absolute;
   width: 126px;
   height: 174px;
-  left: 122px;
+  left: auto;
   top: 74%;
   background-position: center;
   background-repeat: no-repeat;
